@@ -34,21 +34,43 @@ const icons = [
   {
     icon: <FaSearchPlus />,
   },
-  {
-    icon: <FaSearchPlus />,
-  },
-  {
-    icon: <FaSearchPlus />,
-  },
-  {
-    icon: <FaSearchPlus />,
-  },
-  {
-    icon: <FaSearchPlus />,
-  },
-  {
-    icon: <FaSearchPlus />,
-  },
+  // {
+  //   icon: <IoIdCard />,
+  // },
+  // {
+  //   icon: <FaIdCard />,
+  // },
+  // {
+  //   icon: <Gi3dStairs />,
+  // },
+  //   {
+  //     icon: <PiSubtractSquareDuotone />,
+  //   },
+  //   {
+  //     icon: <GrGallery />,
+  //   },
+  //   {
+  //     icon: <FaCalendarAlt />,
+  //   },
+
+  //   {
+  //     icon: <TfiMenuAlt />,
+  //   },
+  //   {
+  //     icon: <GiThreeLeaves />,
+  //   },
+  //   {
+  //     icon: <PiNumberFiveFill />,
+  //   },
+  //   {
+  //     icon: <FaRoad />,
+  //   },
+  //   {
+  //     icon: <GiSandsOfTime />,
+  //   },
+  //   {
+  //     icon: <FiAnchor />,
+  //   },
 ];
 
 export const CategoryAdd = () => {

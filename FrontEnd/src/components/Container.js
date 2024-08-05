@@ -27,6 +27,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
+import { AddCategory } from "./AddCategory";
 export const Container = () => {
   const [value, setValue] = useState([0, 1000]);
   const handleChange = (newValue) => {
@@ -354,6 +355,30 @@ export const Container = () => {
             </div>
           </div>
         </div>
+        <div className="flex gap-3 mt-4">
+          <Input
+            className="w-[200px]"
+            title="text"
+            placeholder="Amount"
+            // onChange={(event) => {
+            //   setTitle(event, target, value);
+            // }}
+          />
+          <Input
+            className="w-[200px]"
+            title="text"
+            placeholder="Name"
+
+            // onChange={(event) => {
+            //   setAmount(event, target, value);
+            // }}
+          />
+
+          <button className="w-[200px] h-10px] bg-blue-400 rounded-xl hover:bg-blue-900">
+            Add
+          </button>
+        </div>
+
         <div className="mt-4">
           <h1>Yesterday</h1>
         </div>
