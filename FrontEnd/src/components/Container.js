@@ -25,19 +25,44 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { AddCategory } from "./AddCategory";
 export const Container = () => {
   const [value, setValue] = useState([0, 1000]);
+  const [amount, setAmount] = useState("");
+  const [type, setType] = useState("");
   const handleChange = (newValue) => {
     setValue(newValue);
   };
+
+  const createAccount = async (body) => {
+    console.log(body);
+
+    try {
+      const res = await fetch(`http://localhost:3001/accounts`, {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      console.log(data);
+      // setData(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {}, []);
   return (
     <div className="w-full h-[1100px] bg-[#f3f4f6] flex">
       <div className="w-[282px] h-[1080px] border-2">
         <div className="w-[250px] h-[88px] ">
           <h1 className="text-xl">Records</h1>
+
           <Dialog>
             <DialogTrigger className="bg-[#0166ff] w-[250px] h-[32px] rounded-full mt-6">
               +Add
@@ -360,21 +385,23 @@ export const Container = () => {
             className="w-[200px]"
             title="text"
             placeholder="Amount"
-            // onChange={(event) => {
-            //   setTitle(event, target, value);
-            // }}
+            onChange={(event) => {
+              setAmount(event.target.value);
+            }}
           />
           <Input
             className="w-[200px]"
             title="text"
-            placeholder="Name"
-
-            // onChange={(event) => {
-            //   setAmount(event, target, value);
-            // }}
+            placeholder="Type"
+            onChange={(event) => {
+              setType(event.target.value);
+            }}
           />
 
-          <button className="w-[200px] h-10px] bg-blue-400 rounded-xl hover:bg-blue-900">
+          <button
+            onClick={() => createAccount({ amount, type })}
+            className="w-[200px] h-10px] bg-blue-400 rounded-xl hover:bg-blue-900"
+          >
             Add
           </button>
         </div>

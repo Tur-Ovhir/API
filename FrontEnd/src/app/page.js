@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await fetch(`http://localhost:3001/`);
+        const res = await fetch(`http://localhost:3001/accounts`);
         const data = await res.json();
         console.log(data);
         setData(data);
@@ -26,12 +26,12 @@ export default function Home() {
       id="adad"
       className="w-[1186px] justify-center items-center container mx-auto"
     >
-      {data.map((item) => (
+      {/* {data?.map((item) => (
         <div key={item.id}>
-          <h1>{item.title}</h1>
-          <p>{item.body}</p>
+          <h1>{item.amount}</h1>
+          <p>{item.type}</p>
         </div>
-      ))}
+      ))} */}
       <Navbar></Navbar>
       <Container></Container>
     </div>
