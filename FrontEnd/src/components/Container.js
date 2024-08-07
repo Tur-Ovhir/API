@@ -25,38 +25,73 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 
 import { AddCategory } from "./AddCategory";
+import { AccountContext } from "./utils/context";
+import axios from "axios";
+import { FaPlus } from "react-icons/fa6";
+
 export const Container = () => {
+  const { userInfo, setUserInfo } = useContext(AccountContext);
   const [value, setValue] = useState([0, 1000]);
   const [amount, setAmount] = useState("");
   const [type, setType] = useState("");
   const handleChange = (newValue) => {
     setValue(newValue);
   };
+  console.log(userInfo);
+  const [accounts, setAccounts] = useState([]);
 
-  const createAccount = async (body) => {
-    console.log(body);
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get("http://localhost:3001/accounts");
+      setAccounts(response.data);
+    };
+    getData();
+  }, []);
 
+  // const createAccount = async (body) => {
+  //   console.log(body);
+
+  //   try {
+  //     const res = await fetch(`http://localhost:3001/accounts`, {
+  //       headers: {
+  //         Accept: "application/json",
+  //         "Content-Type": "application/json",
+  //       },
+  //       method: "POST",
+  //       body: JSON.stringify(body),
+  //     });
+  //     const data = await res.json();
+  //     console.log(data);
+  //     // setData(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  const createAccount = async () => {
     try {
-      const res = await fetch(`http://localhost:3001/accounts`, {
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        method: "POST",
-        body: JSON.stringify(body),
-      });
-      const data = await res.json();
-      console.log(data);
-      // setData(data);
+      const response = await axios.post(
+        "http://localhost:3001/accounts",
+        userInfo
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  const deleteAccount = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:3001/accounts",
+        userInfo
+      );
     } catch (error) {
       console.log(error);
     }
   };
 
-  useEffect(() => {}, []);
   return (
     <div className="w-full h-[1100px] bg-[#f3f4f6] flex">
       <div className="w-[282px] h-[1080px] border-2">
@@ -234,7 +269,21 @@ export const Container = () => {
                 <Chevron />
               </div>
             </div>
-            <h1 className="text-xl">+ Add Category</h1>
+            <div>
+              <Dialog>
+                <DialogTrigger className=" w-[250px]l h-[32px] rounded-full text-2xl">
+                  <div className="flex gap-2 justify-center">
+                    <FaPlus className="text-blue-600" />
+                    Add Category
+                  </div>
+                </DialogTrigger>
+                <DialogContent>
+                  <div>
+                    <AddCategory />
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </div>
           </div>
         </div>
         <div className="w-[245px] h-[100px]  mt-16">
@@ -380,30 +429,44 @@ export const Container = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-3 mt-4">
-          <Input
-            className="w-[200px]"
+        <div className="flex gap-3 mt-4 ">
+          <input
+            className="w-[200px] border rounded-xl"
             title="text"
             placeholder="Amount"
-            onChange={(event) => {
-              setAmount(event.target.value);
-            }}
+            value={userInfo.value}
+            onChange={(event) =>
+              setUserInfo({ ...userInfo, amount: event.target.value })
+            }
           />
           <Input
-            className="w-[200px]"
+            className="w-[200px] rounded-xl"
             title="text"
             placeholder="Type"
-            onChange={(event) => {
-              setType(event.target.value);
-            }}
+            onChange={(event) =>
+              setUserInfo({ ...userInfo, type: event.target.value })
+            }
           />
 
           <button
-            onClick={() => createAccount({ amount, type })}
-            className="w-[200px] h-10px] bg-blue-400 rounded-xl hover:bg-blue-900"
+            onClick={createAccount}
+            className="w-[200px] [h-10px] bg-blue-400 rounded-xl hover:bg-blue-900"
           >
             Add
           </button>
+          <button
+            onClick={deleteAccount}
+            className="w-[100px] h-[30px] bg-red-600 rounded-full hover:bg-red-800"
+          >
+            Delete
+          </button>
+        </div>
+        <div>
+          {accounts.map((account) => (
+            <div>
+              {account.amount}-{account.type}
+            </div>
+          ))}
         </div>
 
         <div className="mt-4">

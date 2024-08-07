@@ -47,104 +47,138 @@ export const AddCategory = () => {
             <h1>Add Category</h1>
           </div>
         </div>
-        <div className="flex gap-5">
+        <div className="flex gap-2">
           <Select>
-            <SelectTrigger className="w-[84px] h-[48px]">
+            <SelectTrigger className="w-[84px] h-[40px]">
               <SelectValue placeholder="" />
             </SelectTrigger>
 
             <SelectContent>
               <div className="  w-[312px] h-[336px] border rounded-xl flex flex-col ">
                 <div className=" flex flex-flows-rows-6 ">
-                  <SelectItem value="green">
-                    <MdHomeFilled className="w-[24px] h-[24px] " />
-                  </SelectItem>
-                  <SelectItem value="zl">
-                    <MdHome className="w-[24px] h-[24px]" />
-                  </SelectItem>
-                  <SelectItem value="huts">
-                    <IoIdCard className="w-[24px] h-[24px]" />
-                  </SelectItem>
-                  <SelectItem value="solior">
-                    <FaIdCard className="w-[24px] h-[24px]" />
-                  </SelectItem>
-                  <SelectItem value="zss">
-                    <Gi3dStairs className="w-[24px] h-[24px]" />
-                  </SelectItem>
-                  <SelectItem value="hgsh">
-                    <PiSubtractSquareDuotone className="w-[24px] h-[24px]" />
-                  </SelectItem>
-                  <SelectItem value="ghdg">
-                    <GrGallery className="w-[24px] h-[24px]" />
-                  </SelectItem>
+                  <div className="w-[312px] h-[44px] flex gap-1">
+                    <SelectItem value="green">
+                      <MdHomeFilled className="w-[20px] h-[20px]" />
+                    </SelectItem>
+                    <SelectItem value="zl">
+                      <MdHome className="w-[20px] h-[20px]" />
+                    </SelectItem>
+                    <SelectItem value="huts">
+                      <IoIdCard className="w-[20px] h-[20px]" />
+                    </SelectItem>
+                    <SelectItem value="solior">
+                      <FaIdCard className="w-[20px] h-[20px]" />
+                    </SelectItem>
+                    <SelectItem value="zss">
+                      <Gi3dStairs className="w-[20px] h-[20px]" />
+                    </SelectItem>
+                  </div>
                 </div>
                 <div className=" flex flex-flows-rows-6">
                   <SelectItem value="osjw">
-                    <FaSearchPlus className="w-[24px] h-[24px]" />
+                    <FaSearchPlus className="w-[20px] h-[20px]" />
                   </SelectItem>
                   <SelectItem value="zhdgfl">
-                    <MdMic className="w-[24px] h-[24px]" />
+                    <MdMic className="w-[20px] h-[20px]" />
                   </SelectItem>
                   <SelectItem value="huhduits">
-                    <FaCalendarAlt className="w-[24px] h-[24px]" />
+                    <FaCalendarAlt className="w-[20px] h-[20px]" />
                   </SelectItem>
                   <SelectItem value="solhdior">
-                    <TfiMenuAlt className="w-[24px] h-[24px]" />
+                    <TfiMenuAlt className="w-[20px] h-[20px]" />
                   </SelectItem>
                   <SelectItem value="zsjohss">
-                    <FaCalendar className="w-[24px] h-[24px]" />
-                  </SelectItem>
-                  <SelectItem value="hgkhsh">
-                    <GiThreeLeaves className="w-[24px] h-[24px]" />
-                  </SelectItem>
-                  <SelectItem value="ghdhjhg">
-                    <PiNumberFiveFill className="w-[24px] h-[24px]" />
+                    <FaCalendar className="w-[20px] h-[20px]" />
                   </SelectItem>
                 </div>
                 <div className=" flex flex-flows-rows-6">
-                  <SelectItem value="osjbdfw">
-                    <PiNumberSevenFill className="w-[24px] h-[24px]" />
+                  <SelectItem value="osjtgrfhgbdfw">
+                    <PiNumberSevenFill className="w-[20px] h-[20px]" />
                   </SelectItem>
-                  <SelectItem value="zhdgfgfl"></SelectItem>
-                  <SelectItem value="huhdufggits">
-                    <FaRoad className="w-[24px] h-[24px]" />
+
+                  <SelectItem value="huhduftrgfggits">
+                    <FaRoad className="w-[20px] h-[20px]" />
                   </SelectItem>
-                  <SelectItem value="solhdgfior">
-                    <GiSandsOfTime className="w-[24px] h-[24px]" />
+                  <SelectItem value="soltrtfhdgfior">
+                    <GiSandsOfTime className="w-[20px] h-[20px]" />
                   </SelectItem>
-                  <SelectItem value="zsjdohss"></SelectItem>
-                  <SelectItem value="hgkdfhsh">
-                    <FiAnchor className="w-[24px] h-[24px]" />
+
+                  <SelectItem value="hgkdtrygtfhsh">
+                    <FiAnchor className="w-[20px] h-[20px]" />
                   </SelectItem>
-                  <SelectItem value="ghdfhjhg"></SelectItem>
+                  <SelectItem value="ghtrtgtdfhjhg">
+                    <PiNumberSevenFill className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                </div>
+                <div className=" flex flex-flows-rows-6">
+                  <SelectItem value="osjtrgw">
+                    <FaSearchPlus className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                  <SelectItem value="zhtrtdgfl">
+                    <MdMic className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                  <SelectItem value="huhdtrtgfuits">
+                    <FaCalendarAlt className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                  <SelectItem value="solhrtydior">
+                    <TfiMenuAlt className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                  <SelectItem value="zstrytjohss">
+                    <FaCalendar className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                </div>
+                <div className="w-[312px] h-[36px] flex gap-1">
+                  <SelectItem value="grtrygtfeen">
+                    <MdHomeFilled className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                  <SelectItem value="zrtrtyl">
+                    <MdHome className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                  <SelectItem value="htrtryuts">
+                    <IoIdCard className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                  <SelectItem value="solirryor">
+                    <FaIdCard className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                  <SelectItem value="ztryss">
+                    <Gi3dStairs className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                </div>
+                <div className=" flex flex-flows-rows-6">
+                  <SelectItem value="osggdjw">
+                    <FaSearchPlus className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                  <SelectItem value="zhdgfhgfl">
+                    <MdMic className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                  <SelectItem value="huhdugfggfits">
+                    <FaCalendarAlt className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                  <SelectItem value="solhdgfhior">
+                    <TfiMenuAlt className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                  <SelectItem value="zsjogfdghss">
+                    <FaCalendar className="w-[20px] h-[20px]" />
+                  </SelectItem>
+                </div>
+                <div className="w-[270px] h-[2px] bg-[#ebebeb] mt-3 ml-7"></div>
+                <div className="flex gap-9 justify-center mt-5 ml-2">
+                  <button className=" w-[24px] h-[24px] border rounded-full bg-[#0166ff] hover:bg-blue-800"></button>
+                  <button className=" w-[24px] h-[24px] border rounded-full bg-[#01b3ff] hover:bg-blue-500"></button>
+                  <button className=" w-[24px] h-[24px] border rounded-full bg-[#41cc00] hover:bg-green-600 "></button>
+                  <button className=" w-[24px] h-[24px] border rounded-full bg-[#f9d100] hover:bg-yellow-500"></button>
+                  <button className=" w-[24px] h-[24px] border rounded-full bg-[#ff7b01] hover:bg-orange-600"></button>
                 </div>
               </div>
             </SelectContent>
           </Select>
 
-          <Select>
-            <SelectTrigger className="w-[350px] h-[48px]">
-              <SelectValue placeholder="Name" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="light">Light</SelectItem>
-              <SelectItem value="dark">Dark</SelectItem>
-              <SelectItem value="system">System</SelectItem>
-            </SelectContent>
-          </Select>
+          <Input type="text" />
         </div>
-        <div className="w-32">
-          <Dialog className="">
-            <DialogTrigger className="bg-[#16a34a] w-[446px] h-[40px] rounded-full mt-6">
-              +Add
-            </DialogTrigger>
-            <DialogContent>
-              <DialogHeader>
-                <DialogTitle></DialogTitle>
-                <DialogDescription></DialogDescription>
-              </DialogHeader>
-            </DialogContent>
-          </Dialog>
+        <div className="w-32 ">
+          <button className="bg-[#16a34a] w-[446px] h-[40px] rounded-full mt-6">
+            Add
+          </button>
         </div>
       </div>
     </div>

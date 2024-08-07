@@ -9,8 +9,9 @@ import {
   // DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-// import { AddCategory } from "@/components/AddCategory";
-import { CategoryAdd } from "./CategoryAdd";
+import { AddCategory } from "@/components/AddCategory";
+// import { CategoryAdd } from "./CategoryAdd";
+import { Add } from "@/components/Add";
 import Link from "next/link";
 export const Navbar = () => {
   return (
@@ -29,8 +30,8 @@ export const Navbar = () => {
           </DialogTrigger>
           <DialogContent>
             <div>
-              {/* <AddCategory /> */}
-              <CategoryAdd />
+              <Add />
+              {/* <CategoryAdd /> */}
             </div>
           </DialogContent>
         </Dialog>

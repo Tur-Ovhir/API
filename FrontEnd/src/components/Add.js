@@ -45,7 +45,8 @@ export const Add = () => {
           <div className="w-[396px] h-[444px]">
             <div className="w-[348px] h-[40px] flex ">
               <div className="w-[172px] h-[40px] border rounded-full flex text-center items-center hover:bg-[#0166ff] justify-center">
-                <Dialog>
+                <button>Expense</button>
+                {/* <Dialog>
                   <DialogTrigger>Expence</DialogTrigger>
                   <DialogContent>
                     <DialogHeader>
@@ -53,7 +54,7 @@ export const Add = () => {
                       <DialogDescription></DialogDescription>
                     </DialogHeader>
                   </DialogContent>
-                </Dialog>
+                </Dialog> */}
               </div>
               {/* <Button
                 className="rounded-full w-[172px] h-[40px] hover:bg-blue-500"
@@ -62,19 +63,20 @@ export const Add = () => {
                 Expense
               </Button> */}
               <div className="w-[172px] h-[40px] border rounded-full flex text-center hover:bg-[#16a34a] justify-center">
-                <Dialog>
+                <button>Income</button>
+                {/* <Dialog>
                   <DialogTrigger>Income</DialogTrigger>
                   <DialogContent>
                     <DialogHeader>
                       <DialogTitle></DialogTitle>
-                      <DialogDescription>
-                        {/* This action cannot be undone. This will permanently
+                      <DialogDescription> */}
+                {/* This action cannot be undone. This will permanently
                         delete your account and remove your data from our
                         servers. */}
-                      </DialogDescription>
+                {/* </DialogDescription>
                     </DialogHeader>
                   </DialogContent>
-                </Dialog>
+                </Dialog> */}
               </div>
 
               {/* <Button
@@ -185,12 +187,13 @@ export const Add = () => {
             <div className="mt-4 flex gap-3">
               <div>
                 <h1>Date</h1>
-                <Calendarr className="w-[168px] h-[48px]" />
+                {/* <Calendarr " /> */}
+                <Input className="w-[168px] h-[48px]" type="date" />
               </div>
               <div className="flex flex-col ">
                 <h1>Date</h1>
                 <div className="w-[168px] h-[48px]">
-                  <Calendarr className="w-[168px] h-[48px]" />
+                  <Input className="w-[168px] h-[48px]" type="time" />
                 </div>
               </div>
             </div>
