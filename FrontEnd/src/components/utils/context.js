@@ -11,3 +11,16 @@ export const AccountContextProvider = ({ children }) => {
     </AccountContext.Provider>
   );
 };
+// import React, { createContext, useState } from "react";
+
+// export const AccountContext = createContext();
+
+// export const AccountProvider = ({ children }) => {
+//   const [userInfo, setUserInfo] = useState(null);
+
+//   return (
+//     <AccountContext.Provider value={{ userInfo, setUserInfo }}>
+//       {children}
+//     </AccountContext.Provider>
+//   );
+// };

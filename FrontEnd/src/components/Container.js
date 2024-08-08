@@ -16,6 +16,7 @@ import { IoHomeSharp } from "react-icons/io5";
 import { CiForkAndKnife } from "react-icons/ci";
 import { Chevron } from "@/Asset/chevronright";
 import { Add } from "@/components/Add";
+
 import { Button } from "./ui/button";
 import {
   Select,
@@ -51,26 +52,6 @@ export const Container = () => {
     getData();
   }, []);
 
-  // const createAccount = async (body) => {
-  //   console.log(body);
-
-  //   try {
-  //     const res = await fetch(`http://localhost:3001/accounts`, {
-  //       headers: {
-  //         Accept: "application/json",
-  //         "Content-Type": "application/json",
-  //       },
-  //       method: "POST",
-  //       body: JSON.stringify(body),
-  //     });
-  //     const data = await res.json();
-  //     console.log(data);
-  //     // setData(data);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
   const createAccount = async () => {
     try {
       const response = await axios.post(
@@ -81,15 +62,10 @@ export const Container = () => {
       console.error(error);
     }
   };
-  const deleteAccount = async () => {
-    try {
-      const response = await axios.post(
-        "http://localhost:3001/accounts",
-        userInfo
-      );
-    } catch (error) {
-      console.log(error);
-    }
+  const deleteAccount = async (id) => {
+    const response = await axios.delete(`http://localhost:3001/accounts/${id}`);
+
+    setAccounts(accounts.filter((account) => account.id !== id));
   };
 
   return (
@@ -430,6 +406,7 @@ export const Container = () => {
           </div>
         </div>
         <div className="flex gap-3 mt-4 ">
+          <Checkbox />
           <input
             className="w-[200px] border rounded-xl"
             title="text"
@@ -454,17 +431,21 @@ export const Container = () => {
           >
             Add
           </button>
-          <button
-            onClick={deleteAccount}
-            className="w-[100px] h-[30px] bg-red-600 rounded-full hover:bg-red-800"
-          >
-            Delete
-          </button>
         </div>
-        <div>
+        <div className="">
           {accounts.map((account) => (
-            <div>
-              {account.amount}-{account.type}
+            <div className="flex justify-between">
+              <div className="w-[860px] h-[62px] border flex  justify-between rounded-xl bg-white mt-4">
+                <div>{account.amount}</div>
+                <div> {account.type}</div>
+
+                <button
+                  onClick={() => deleteAccount(account.id)}
+                  className="w-[100px] h-[30px] bg-red-600 rounded-full hover:bg-red-800 "
+                >
+                  Delete
+                </button>
+              </div>
             </div>
           ))}
         </div>

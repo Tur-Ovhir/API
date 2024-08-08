@@ -32,8 +32,34 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
 export const Add = () => {
+  const { userInfo, setUserInfo } = useContext(AccountContext);
+  const [amount, setAmount] = useState("");
+  // const [type, setType] = useState("");
+  const handleChange = (newValue) => {
+    setValue(newValue);
+  };
+  console.log(userInfo);
+  const [accounts, setAccounts] = useState([]);
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get("http://localhost:3001/accounts");
+      setAccounts(response.data);
+    };
+    getData();
+  }, []);
+
+  const createAccount = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:3001/accounts",
+        userInfo
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="w-[792px] h-[512px] border bg-white rounded-xl flex-row">
       <div className="w-[750px] h-[512px] ml-4 mt-5">
@@ -87,10 +113,14 @@ export const Add = () => {
               </Button> */}
             </div>
             <div className="flex flex-row">
-              <Input
+              <input
                 className="w-[348px] h-[76px] mt-5 bg-[#f3f4f6] text-[#9ca3af]"
                 placeholder=" Amount
                 ₮ 000.00"
+                value={userInfo.value}
+                onChange={(event) =>
+                  setUserInfo({ ...userInfo, amount: event.target.value })
+                }
               />
             </div>
             <div className="mt-4">

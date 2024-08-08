@@ -40,7 +40,7 @@ import { FaRoad } from "react-icons/fa";
 import { FiAnchor } from "react-icons/fi";
 export const AddCategory = () => {
   return (
-    <div className="w-[494px] h-[236px] bg-white">
+    <div className="w-[494px] h-[236px] bg-white ">
       <div className="w-[446px] h-[236px]">
         <div className="w-[446px] h-[68px]">
           <div className="flex justify-between">
@@ -53,7 +53,7 @@ export const AddCategory = () => {
               <SelectValue placeholder="" />
             </SelectTrigger>
 
-            <SelectContent>
+            <SelectContent className="text-[#0166ff] hover:to-blue-600">
               <div className="  w-[312px] h-[336px] border rounded-xl flex flex-col ">
                 <div className=" flex flex-flows-rows-6 ">
                   <div className="w-[312px] h-[44px] flex gap-1">
