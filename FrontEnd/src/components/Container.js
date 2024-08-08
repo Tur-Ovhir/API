@@ -28,6 +28,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { useState, useEffect, useContext } from "react";
 
+
 import { AddCategory } from "./AddCategory";
 import { AccountContext } from "./utils/context";
 import axios from "axios";
@@ -101,7 +102,7 @@ export const Container = () => {
           <div className="mt-6 gap-10">
             <div className="flex-row flex ">
               <div className="flex items-center space-x-2">
-                <Checkbox id="terms" />
+                <Checkbox id="terms" className="rounded-full`"/>
                 <label
                   htmlFor="terms"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -111,7 +112,7 @@ export const Container = () => {
             </div>
             <div className="flex-row flex">
               <div className="flex items-center space-x-2">
-                <Checkbox id="terms" />
+                <Checkbox id="terms" className="rounded-full" />
                 <label
                   htmlFor="terms"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -121,7 +122,7 @@ export const Container = () => {
             </div>
             <div className="flex-row flex">
               <div className="flex items-center space-x-2">
-                <Checkbox id="terms" />
+                <Checkbox id="terms" className="rounded-full" />
                 <label
                   htmlFor="terms"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
@@ -303,112 +304,22 @@ export const Container = () => {
               <SelectValue placeholder="Nevest first" />
             </SelectTrigger>
             <SelectContent>
+              {/* <Dark/> */}
               <SelectItem value="light">Light</SelectItem>
               <SelectItem value="dark">Dark</SelectItem>
               <SelectItem value="system">System</SelectItem>
             </SelectContent>
           </Select>
         </div>
-        <div className="flex items-center space-x-2 w-[full] h-[48px] border rounded-xl mt-4 justify-between bg-white">
-          <div className="flex gap-2 ml-3">
-            <Checkbox id="terms" />
-            <label
-              htmlFor="terms"
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-            ></label>
-            Select All
-          </div>
-          <div>
-            <p>-35,500₮</p>
-          </div>
-        </div>
+       
         <div className="mt-3">
           <h1>Today</h1>
         </div>
-        <div className="w-full h-[64px] border rounded-xl mt-2 bg-white">
-          <div className="h-full flex items-center space-x-2 ml-3 gap-2 justify-between">
-            <div className="flex gap-2">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              ></label>
-              <IoHomeSharp className="w-[40px] h-[40px] border rounded-full bg-blue-700 text-white" />
-              Lending & Renting
-            </div>
-            <div>
-              <p className="text-green-500">-1,000₮</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full h-[64px] border rounded-xl mt-3 bg-white">
-          <div className="flex h-full items-center space-x-2 justify-between ml-3">
-            <div className="flex gap-3">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              ></label>
-              <CiForkAndKnife className=" bg-red-600 w-[40px] h-[40px] border rounded-full " />
-              Food & Drinks
-            </div>
-            <div>
-              <p className="text-red-600">-1,000₮</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full h-[64px] border rounded-xl mt-3 bg-white ">
-          <div className="flex h-full items-center space-x-2 justify-between ml-3">
-            <div className="flex gap-3">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              ></label>
-              <CiForkAndKnife className=" bg-red-600 w-[40px] h-[40px] border rounded-full " />
-              Food & Drinks
-            </div>
-            <div>
-              <p className="text-[#eab308]">-1,000₮</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full h-[64px] border rounded-xl mt-3 bg-white ">
-          <div className="flex h-full items-center space-x-2 justify-between ml-3">
-            <div className="flex gap-3">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              ></label>
-              <CiForkAndKnife className=" bg-red-600 w-[40px] h-[40px] border rounded-full " />
-              Food & Drinks
-            </div>
-            <div>
-              <p className="text-[#eab308]">-1,000₮</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full h-[64px] border rounded-xl mt-3 bg-white">
-          <div className="flex h-full items-center space-x-2 justify-between ml-3">
-            <div className="flex gap-3">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              ></label>
-              <CiForkAndKnife className=" bg-red-600 w-[40px] h-[40px] border rounded-full " />
-              Food & Drinks
-            </div>
-            <div>
-              <p className="text-[#eab308]">-1,000₮</p>
-            </div>
-          </div>
-        </div>
+       
         <div className="flex gap-3 mt-4 ">
           <Checkbox />
           <input
-            className="w-[200px] border rounded-xl"
+            className="w-[200px] border rounded-xl "
             title="text"
             placeholder="Amount"
             value={userInfo.value}
@@ -435,8 +346,8 @@ export const Container = () => {
         <div className="">
           {accounts.map((account) => (
             <div className="flex justify-between">
-              <div className="w-[860px] h-[62px] border flex  justify-between rounded-xl bg-white mt-4">
-                <div>{account.amount}</div>
+              <div className="w-[830px] h-[62px] border flex  justify-between rounded-xl bg-white mt-4 items-center ">
+                <div >{account.amount}</div>
                 <div> {account.type}</div>
 
                 <button
@@ -453,102 +364,7 @@ export const Container = () => {
         <div className="mt-4">
           <h1>Yesterday</h1>
         </div>
-        <div className="w-full h-[64px] border rounded-xl mt-3 bg-white">
-          <div className="flex h-full items-center space-x-2 justify-between ml-3">
-            <div className="flex gap-3">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              ></label>
-              <CiForkAndKnife className=" bg-red-600 w-[40px] h-[40px] border rounded-full " />
-              Food & Drinks
-            </div>
-            <div>
-              <p className="text-[#eab308]">-1,000₮</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full h-[64px] border rounded-xl mt-3 bg-white">
-          <div className="flex h-full items-center space-x-2 justify-between ml-3">
-            <div className="flex gap-3">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              ></label>
-              <CiForkAndKnife className=" bg-red-600 w-[40px] h-[40px] border rounded-full " />
-              Food & Drinks
-            </div>
-            <div>
-              <p className="text-[#eab308]">-1,000₮</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full h-[64px] border rounded-xl mt-3 bg-white">
-          <div className="flex h-full items-center space-x-2 justify-between ml-3">
-            <div className="flex gap-3">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              ></label>
-              <CiForkAndKnife className=" bg-red-600 w-[40px] h-[40px] border rounded-full " />
-              Food & Drinks
-            </div>
-            <div>
-              <p className="text-[#eab308]">-1,000₮</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full h-[64px] border rounded-xl mt-3 bg-white">
-          <div className="flex h-full items-center space-x-2 justify-between ml-3">
-            <div className="flex gap-3">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              ></label>
-              <CiForkAndKnife className=" bg-red-600 w-[40px] h-[40px] border rounded-full " />
-              Food & Drinks
-            </div>
-            <div>
-              <p className="text-[#eab308]">-1,000₮</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full h-[64px] border rounded-xl mt-3 bg-white">
-          <div className="flex h-full items-center space-x-2 justify-between ml-3">
-            <div className="flex gap-3">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              ></label>
-              <CiForkAndKnife className=" bg-red-600 w-[40px] h-[40px] border rounded-full " />
-              Food & Drinks
-            </div>
-            <div>
-              <p className="text-[#eab308]">-1,000₮</p>
-            </div>
-          </div>
-        </div>
-        <div className="w-full h-[64px] border rounded-xl mt-3 bg-white">
-          <div className="flex h-full items-center space-x-2 justify-between ml-3">
-            <div className="flex gap-3">
-              <Checkbox id="terms" />
-              <label
-                htmlFor="terms"
-                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-              ></label>
-              <CiForkAndKnife className=" bg-red-600 w-[40px] h-[40px] border rounded-full " />
-              Food & Drinks
-            </div>
-            <div>
-              <p className="text-[#eab308]">-1,000₮</p>
-            </div>
-          </div>
-        </div>
+  
       </div>
     </div>
   );

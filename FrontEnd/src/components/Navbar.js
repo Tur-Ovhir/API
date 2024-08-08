@@ -12,6 +12,7 @@ import {
 import { AddCategory } from "@/components/AddCategory";
 // import { CategoryAdd } from "./CategoryAdd";
 import { Add } from "@/components/Add";
+
 import Link from "next/link";
 export const Navbar = () => {
   return (
@@ -21,7 +22,9 @@ export const Navbar = () => {
           <img className="w-[28px] h-[28px]" src="Vector.jpg" />
         </Link>
         <p className="text-black">Dashboard</p>
+      
         <h1 className="text-[#0F172A]">Records</h1>
+        
       </div>
       <div className="flex-row flex gap-3">
         <Dialog>
