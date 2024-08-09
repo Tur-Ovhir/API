@@ -1,26 +1,44 @@
 [
   {
-    "amount": "750000000",
-    "type": "lx 600",
+    "amount": "6000000",
+    "type": "zarlaga",
     "date": "",
-    "id": "076af026-fd9b-403d-925f-950b0b4c1be6"
-  },
-  {
-    "amount": "350000000",
-    "type": "land cruiser 300 vx",
-    "date": "",
-    "id": "37071bb5-1e3f-4a46-9345-dfb3915a8935"
+    "id": "1c800ea8-1809-4998-8f2f-c7b7ac1abbee"
   },
   {
     "amount": "600000000",
-    "type": "M.Benz G class 2022",
+    "type": "orlogo",
     "date": "",
-    "id": "d430e853-7fb6-4378-842d-10fe14906a6f"
+    "id": "3cc34de2-b9f6-41f6-9eb3-414800e70aaf"
   },
   {
-    "amount": "290000000",
-    "type": "Land cruiser 250 ",
+    "amount": "700000000",
+    "type": "bair",
     "date": "",
-    "id": "09dd51bf-c9e1-471b-ac80-bbf867c590c8"
+    "id": "53eb5348-7b1b-490d-99ea-39a66590d326"
+  },
+  {
+    "amount": "500000000",
+    "type": "mashin",
+    "date": "",
+    "id": "932ced03-3208-4e7d-a7fc-1894f1d407c0"
+  },
+  {
+    "amount": "3000000",
+    "type": "unadag dugui",
+    "date": "",
+    "id": "361e87d4-1141-48b1-a37e-2a5df3180172"
+  },
+  {
+    "amount": "1000000",
+    "type": "baraa",
+    "date": "",
+    "id": "f7f66ada-8fe2-455b-a8c6-60bece5db7b7"
+  },
+  {
+    "amount": "13000000",
+    "type": "Pinecone",
+    "date": "",
+    "id": "1f332579-8975-47f7-ad86-8af3d3c2995e"
   }
 ]
