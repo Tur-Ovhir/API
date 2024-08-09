@@ -12,6 +12,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Calendarr } from "./Calendarr";
+import { useContext, useState, useEffect } from "react";
+import { AccountContext } from "./utils/context";
+import axios from "axios";
 
 import {
   Dialog,
@@ -33,21 +36,21 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 export const Add = () => {
-  // const { userInfo, setUserInfo } = useContext(AccountContext);
-  // const [amount, setAmount] = useState("");
+  const { userInfo, setUserInfo } = useContext(AccountContext);
+  const [amount, setAmount] = useState("");
   // const [type, setType] = useState("");
   const handleChange = (newValue) => {
     setValue(newValue);
   };
-  // console.log(userInfo);
-  // const [accounts, setAccounts] = useState([]);
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const response = await axios.get("http://localhost:3001/accounts");
-  //     setAccounts(response.data);
-  //   };
-  //   getData();
-  // }, []);
+  console.log(userInfo);
+  const [accounts, setAccounts] = useState([]);
+  useEffect(() => {
+    const getData = async () => {
+      const response = await axios.get("http://localhost:3001/accounts");
+      setAccounts(response.data);
+    };
+    getData();
+  }, []);
 
   const createAccount = async () => {
     try {
@@ -72,25 +75,21 @@ export const Add = () => {
             <div className="w-[348px] h-[40px] flex ">
               <div className="w-[172px] h-[40px] border rounded-full flex text-center items-center hover:bg-[#0166ff] justify-center">
                 <button>Expense</button>
-               
-              </div>
-            
-              <div className="w-[172px] h-[40px] border rounded-full flex text-center hover:bg-[#16a34a] justify-center">
-                <button>Income</button>
-               
               </div>
 
-            
+              <div className="w-[172px] h-[40px] border rounded-full flex text-center hover:bg-[#16a34a] justify-center">
+                <button>Income</button>
+              </div>
             </div>
             <div className="flex flex-row">
               <input
                 className="w-[348px] h-[76px] mt-5 bg-[#f3f4f6] text-[#9ca3af] rounded-xl"
                 placeholder=" Amount
                 ₮ 000.00"
-                // value={userInfo.value}
-                // onChange={(event) =>
-                //   setUserInfo({ ...userInfo, amount: event.target.value })
-                // }
+                value={userInfo.value}
+                onChange={(event) =>
+                  setUserInfo({ amount: event.target.value })
+                }
               />
             </div>
             <div className="mt-4">
@@ -198,22 +197,19 @@ export const Add = () => {
               </div>
             </div>
             <div className="w-[348px] h-[40px] bg-blue-500 mt-9 text-white rounded-full text-center">
-              <button className="mt-2"> Add Record</button>
+              <button onClick={createAccount} className="mt-2">
+                Add Record
+              </button>
             </div>
           </div>
           <div className="w-[396px] h-[444px]">
             <h1>Payee</h1>
             <div>
-              <Select>
-                <SelectTrigger className="w-[348px] h-[48px] border bg-[#f3f4f6] mt-3 text-[#94a3b8]">
-                  <SelectValue placeholder="Write here" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">System</SelectItem>
-                </SelectContent>
-              </Select>
+              <Input
+                className="w-[348px] h-[48px] border bg-[#f3f4f6] mt-3 text-[#94a3b8]"
+                type="text"
+                placeholder="Write here"
+              />
             </div>
             <h1 className="mt-5">Note</h1>
             <div className="">
@@ -221,6 +217,9 @@ export const Add = () => {
                 className="w-[348px] h-[280px] mt-5 bg-[#f3f4f6] text-[#9ca3af] flex items-start"
                 type="text"
                 placeholder="Write here"
+                onChange={(event) =>
+                  setUserInfo({ ...userInfo, type: event.target.value })
+                }
               />
             </div>
           </div>

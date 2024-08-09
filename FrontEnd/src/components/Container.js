@@ -28,7 +28,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { useState, useEffect, useContext } from "react";
 
-
 import { AddCategory } from "./AddCategory";
 import { AccountContext } from "./utils/context";
 import axios from "axios";
@@ -102,12 +101,13 @@ export const Container = () => {
           <div className="mt-6 gap-10">
             <div className="flex-row flex ">
               <div className="flex items-center space-x-2">
-                <Checkbox id="terms" className="rounded-full`"/>
+                <Checkbox id="terms" className="rounded-full border`" />
                 <label
                   htmlFor="terms"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 ></label>
               </div>
+
               <h1>All</h1>
             </div>
             <div className="flex-row flex">
@@ -304,18 +304,18 @@ export const Container = () => {
               <SelectValue placeholder="Nevest first" />
             </SelectTrigger>
             <SelectContent>
-              {/* <Dark/> */}
+              {/* <Dark/>  */}
               <SelectItem value="light">Light</SelectItem>
               <SelectItem value="dark">Dark</SelectItem>
               <SelectItem value="system">System</SelectItem>
             </SelectContent>
           </Select>
         </div>
-       
+
         <div className="mt-3">
           <h1>Today</h1>
         </div>
-       
+
         <div className="flex gap-3 mt-4 ">
           <Checkbox />
           <input
@@ -347,7 +347,7 @@ export const Container = () => {
           {accounts.map((account) => (
             <div className="flex justify-between">
               <div className="w-[830px] h-[62px] border flex  justify-between rounded-xl bg-white mt-4 items-center ">
-                <div >{account.amount}</div>
+                <div>{account.amount}</div>
                 <div> {account.type}</div>
 
                 <button
@@ -364,7 +364,6 @@ export const Container = () => {
         <div className="mt-4">
           <h1>Yesterday</h1>
         </div>
-  
       </div>
     </div>
   );

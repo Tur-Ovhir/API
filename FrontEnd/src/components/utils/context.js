@@ -4,7 +4,13 @@ const { createContext, useState } = require("react");
 
 export const AccountContext = createContext(null);
 export const AccountContextProvider = ({ children }) => {
-  const [userInfo, setUserInfo] = useState({ amount: "", type: "", date: "" });
+  const [userInfo, setUserInfo] = useState({
+    amount: "",
+    type: "",
+    date: "",
+    payee: "",
+    note: "",
+  });
   return (
     <AccountContext.Provider value={{ userInfo, setUserInfo }}>
       {children}

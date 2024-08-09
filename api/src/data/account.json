@@ -30,15 +30,34 @@
     "id": "361e87d4-1141-48b1-a37e-2a5df3180172"
   },
   {
-    "amount": "1000000",
-    "type": "baraa",
-    "date": "",
-    "id": "f7f66ada-8fe2-455b-a8c6-60bece5db7b7"
-  },
-  {
     "amount": "13000000",
     "type": "Pinecone",
     "date": "",
     "id": "1f332579-8975-47f7-ad86-8af3d3c2995e"
+  },
+  {
+    "amount": "500.000₮",
+    "type": "us,undaa",
+    "id": "2ed84b82-29c2-4fd5-bb5c-34da7bc150bb"
+  },
+  {
+    "amount": "100.000",
+    "type": "Boldoo",
+    "id": "42cbb6bb-bc66-421d-8a34-df749fec9a77"
+  },
+  {
+    "amount": "200.000",
+    "type": "Boldoo",
+    "id": "ce0283ca-6bb6-4b99-84c1-3da024db095d"
+  },
+  {
+    "amount": "5900000",
+    "type": "djbjfdjbdjnfkxfdgfgfbfb",
+    "id": "bb136dfc-a769-4321-8fa9-509dfb7109f4"
+  },
+  {
+    "amount": "5900000",
+    "type": "djbjfdjbdjnfkxfdgfgfbfb",
+    "id": "e629b50f-a738-4eff-8201-80dfa2591fe2"
   }
 ]
