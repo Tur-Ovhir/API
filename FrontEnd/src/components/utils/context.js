@@ -1,5 +1,7 @@
 "use client";
 
+import { set } from "date-fns";
+
 const { createContext, useState } = require("react");
 
 export const AccountContext = createContext(null);
@@ -11,8 +13,15 @@ export const AccountContextProvider = ({ children }) => {
     payee: "",
     note: "",
   });
+  const [category, setCategory] = useState({
+    name: "",
+    icon: null,
+    color: "",
+  });
   return (
-    <AccountContext.Provider value={{ userInfo, setUserInfo }}>
+    <AccountContext.Provider
+      value={{ userInfo, setUserInfo, category, setCategory }}
+    >
       {children}
     </AccountContext.Provider>
   );
