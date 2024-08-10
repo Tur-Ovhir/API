@@ -1,26 +1,8 @@
 [
   {
-    "amount": "750000000",
-    "type": "lx 600",
+    "amount": "650000",
+    "type": "aavd",
     "date": "",
-    "id": "076af026-fd9b-403d-925f-950b0b4c1be6"
-  },
-  {
-    "amount": "350000000",
-    "type": "land cruiser 300 vx",
-    "date": "",
-    "id": "37071bb5-1e3f-4a46-9345-dfb3915a8935"
-  },
-  {
-    "amount": "600000000",
-    "type": "M.Benz G class 2022",
-    "date": "",
-    "id": "d430e853-7fb6-4378-842d-10fe14906a6f"
-  },
-  {
-    "amount": "290000000",
-    "type": "Land cruiser 250 ",
-    "date": "",
-    "id": "09dd51bf-c9e1-471b-ac80-bbf867c590c8"
+    "id": "76228dfd-bf94-4cb3-9a14-b8fa264c3300"
   }
 ]
