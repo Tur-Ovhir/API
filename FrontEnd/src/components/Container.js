@@ -1,23 +1,31 @@
 "use client";
+// import {
+//   Dialog,
+//   DialogContent,
+//   DialogDescription,
+//   DialogHeader,
+//   DialogTitle,
+//   DialogTrigger,
+// } from "@/components/ui/dialog";
+import { Sidebar } from "@/components/Sidebar";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Checkbox } from "@/components/ui/checkbox";
-import { FaEye } from "react-icons/fa";
-import { Slider } from "@/components/ui/slider";
-import { FiChevronLeft } from "react-icons/fi";
-import { FiChevronRight } from "react-icons/fi";
-import { IoHomeSharp } from "react-icons/io5";
-import { CiForkAndKnife } from "react-icons/ci";
-import { Chevron } from "@/Asset/chevronright";
-import { Add } from "@/components/Add";
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+// import { Checkbox } from "@/components/ui/checkbox";
+// import { FaEye } from "react-icons/fa";
+// import { Slider } from "@/components/ui/slider";
+// import { FiChevronLeft } from "react-icons/fi";
+// import { FiChevronRight } from "react-icons/fi";
+// import { IoHomeSharp } from "react-icons/io5";
+// import { CiForkAndKnife } from "react-icons/ci";
+// import { Chevron } from "@/Asset/chevronright";
+// import { Add } from "@/components/Add";
 
-import { Button } from "./ui/button";
+// import { Button } from "./ui/button";
 import {
   Select,
   SelectContent,
@@ -25,19 +33,22 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
+// import { Input } from "@/components/ui/input";
 import { useState, useEffect, useContext } from "react";
 
-import { AddCategory } from "./AddCategory";
+// import { AddCategory } from "./AddCategory";
 import { AccountContext } from "./utils/context";
 import axios from "axios";
-import { FaPlus } from "react-icons/fa6";
+// import { FaPlus } from "react-icons/fa6";
+import { Sidebar } from "lucide-react";
 
 export const Container = () => {
   const { userInfo, setUserInfo } = useContext(AccountContext);
-  const [value, setValue] = useState([0, 1000]);
+  // const [value, setValue] = useState([0, 1000]);
+  const [value, setValue] = useState([0, 31]);
   const [amount, setAmount] = useState("");
   const [type, setType] = useState("");
+  const [category, setCategory] = useState("");
   const handleChange = (newValue) => {
     setValue(newValue);
   };
@@ -70,7 +81,7 @@ export const Container = () => {
 
   return (
     <div className="w-full h-[1100px] bg-[#f3f4f6] flex">
-      <div className="w-[282px] h-[1080px] border-2">
+      {/* <div className="w-[282px] h-[1080px] border-2">
         <div className="w-[250px] h-[88px] ">
           <h1 className="text-xl">Records</h1>
 
@@ -286,19 +297,13 @@ export const Container = () => {
           <h1> {value[0]} </h1>
           <h1> {value[1]} </h1>
         </div>
+      </div> */}
+      <div>
+        <Sidebar />
       </div>
-
       <div className="w-[894px] h-[1080px] ml-4 mt-2">
         <div className=" flex-row  flex  justify-between ">
-          <div className="flex gap-1">
-            <div className="w-[32px] h-[32px] border rounded-xl   ">
-              <FiChevronLeft className="mt-2 ml-1 " />
-            </div>
-            <h1 className="mt-1 ">Last 30 Days</h1>
-            <div className="w-[32px] h-[32px] border rounded-xl">
-              <FiChevronRight className="mt-2 ml-1" />
-            </div>
-          </div>
+          <div className="flex gap-1"></div>
           <Select>
             <SelectTrigger className="w-[180px] h-[48px] border">
               <SelectValue placeholder="Nevest first" />
@@ -311,12 +316,32 @@ export const Container = () => {
             </SelectContent>
           </Select>
         </div>
-
+        <div className="ml-10  ">
+          <Carousel className=" w-[108px] h-[32px] flex justify-between -mt-4">
+            <CarouselContent>
+              <CarouselItem> Last 3 Days</CarouselItem>
+              <CarouselItem>Last 4 Days</CarouselItem>
+              <CarouselItem>Last 6 Days</CarouselItem>
+              <CarouselItem>Last 8 Days</CarouselItem>
+              <CarouselItem>Last 10 Days</CarouselItem>
+              <CarouselItem>Last 15 Days</CarouselItem>
+              <CarouselItem>Last 20 Days</CarouselItem>
+              <CarouselItem>Last 22 Days</CarouselItem>
+              <CarouselItem>Last 24 Days</CarouselItem>
+              <CarouselItem> Last 26 Days</CarouselItem>
+              <CarouselItem> Last 28 Days</CarouselItem>
+              <CarouselItem> Last 30 Days</CarouselItem>
+              <CarouselItem> Last 31 Days</CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
         <div className="mt-3">
           <h1>Today</h1>
         </div>
 
-        <div className="flex gap-3 mt-4 ">
+        {/* <div className="flex gap-3 mt-4 ">
           <Checkbox />
           <input
             className="w-[200px] border rounded-xl "
@@ -342,7 +367,7 @@ export const Container = () => {
           >
             Add
           </button>
-        </div>
+        </div> */}
         <div className="">
           {accounts.map((account) => (
             <div className="flex justify-between">
