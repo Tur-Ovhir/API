@@ -1,12 +1,12 @@
 "use client";
-// import {
-//   Dialog,
-//   DialogContent,
-//   DialogDescription,
-//   DialogHeader,
-//   DialogTitle,
-//   DialogTrigger,
-// } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { Sidebar } from "@/components/Sidebar";
 import {
   Carousel,
@@ -15,17 +15,17 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-// import { Checkbox } from "@/components/ui/checkbox";
-// import { FaEye } from "react-icons/fa";
-// import { Slider } from "@/components/ui/slider";
-// import { FiChevronLeft } from "react-icons/fi";
-// import { FiChevronRight } from "react-icons/fi";
-// import { IoHomeSharp } from "react-icons/io5";
-// import { CiForkAndKnife } from "react-icons/ci";
-// import { Chevron } from "@/Asset/chevronright";
-// import { Add } from "@/components/Add";
+import { Checkbox } from "@/components/ui/checkbox";
+import { FaEye } from "react-icons/fa";
+import { Slider } from "@/components/ui/slider";
+import { FiChevronLeft } from "react-icons/fi";
+import { FiChevronRight } from "react-icons/fi";
+import { IoHomeSharp } from "react-icons/io5";
+import { CiForkAndKnife } from "react-icons/ci";
+import { Chevron } from "@/Asset/chevronright";
+import { Add } from "@/components/Add";
 
-// import { Button } from "./ui/button";
+import { Button } from "./ui/button";
 import {
   Select,
   SelectContent,
@@ -33,19 +33,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-// import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input";
 import { useState, useEffect, useContext } from "react";
 
-// import { AddCategory } from "./AddCategory";
+import { AddCategory } from "./AddCategory";
 import { AccountContext } from "./utils/context";
 import axios from "axios";
-// import { FaPlus } from "react-icons/fa6";
+import { FaPlus } from "react-icons/fa6";
 import { Sidebar } from "lucide-react";
 
 export const Container = () => {
   const { userInfo, setUserInfo } = useContext(AccountContext);
-  // const [value, setValue] = useState([0, 1000]);
-  const [value, setValue] = useState([0, 31]);
+  const [value, setValue] = useState([0, 1000]);
+
   const [amount, setAmount] = useState("");
   const [type, setType] = useState("");
   const [category, setCategory] = useState("");
@@ -81,7 +81,7 @@ export const Container = () => {
 
   return (
     <div className="w-full h-[1100px] bg-[#f3f4f6] flex">
-      {/* <div className="w-[282px] h-[1080px] border-2">
+      <div className="w-[282px] h-[1080px] border-2">
         <div className="w-[250px] h-[88px] ">
           <h1 className="text-xl">Records</h1>
 
@@ -297,7 +297,7 @@ export const Container = () => {
           <h1> {value[0]} </h1>
           <h1> {value[1]} </h1>
         </div>
-      </div> */}
+      </div>
       <div>
         <Sidebar />
       </div>
