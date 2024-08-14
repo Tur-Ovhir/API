@@ -7,7 +7,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Sidebar } from "@/components/Sidebar";
+
 import {
   Carousel,
   CarouselContent,
@@ -299,7 +299,7 @@ export const Container = () => {
         </div>
       </div>
       <div>
-        <Sidebar />
+      
       </div>
       <div className="w-[894px] h-[1080px] ml-4 mt-2">
         <div className=" flex-row  flex  justify-between ">

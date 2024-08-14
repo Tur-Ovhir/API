@@ -1,5 +1,5 @@
 "use client";
-
+import { Dashboard } from "@/app/dashboard/page";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   Dialog,
@@ -12,8 +12,8 @@ import {
 import { AddCategory } from "@/components/AddCategory";
 // import { CategoryAdd } from "./CategoryAdd";
 import { Add } from "@/components/Add";
+import Link from 'next/link'
 
-import Link from "next/link";
 export const Navbar = () => {
   return (
     <div className="w-full h-[72px] bg-white flex justify-between flex-row">
@@ -21,10 +21,12 @@ export const Navbar = () => {
         <Link href="/login">
           <img className="w-[28px] h-[28px]" src="Vector.jpg" />
         </Link>
-        <p className="text-black">Dashboard</p>
-      
+        <Link href="/dashboard">
+          <p className="text-black">Dashboard</p>
+        </Link>
+
         <h1 className="text-[#0F172A]">Records</h1>
-        
+
       </div>
       <div className="flex-row flex gap-3">
         <Dialog>
