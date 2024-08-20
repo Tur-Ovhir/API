@@ -40,7 +40,6 @@ import { AddCategory } from "./AddCategory";
 import { AccountContext } from "./utils/context";
 import axios from "axios";
 import { FaPlus } from "react-icons/fa6";
-import { Sidebar } from "lucide-react";
 
 export const Container = () => {
   const { userInfo, setUserInfo } = useContext(AccountContext);
@@ -57,7 +56,11 @@ export const Container = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get("http://localhost:3001/accounts");
+      const response = await axios.get("http://localhost:3001/accounts", {
+        headers: {
+          Authorization: "Bearer" + localStorage.getItem("token"),
+        },
+      });
       setAccounts(response.data);
     };
     getData();
@@ -298,9 +301,7 @@ export const Container = () => {
           <h1> {value[1]} </h1>
         </div>
       </div>
-      <div>
-      
-      </div>
+      <div></div>
       <div className="w-[894px] h-[1080px] ml-4 mt-2">
         <div className=" flex-row  flex  justify-between ">
           <div className="flex gap-1"></div>

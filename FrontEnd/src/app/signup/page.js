@@ -1,7 +1,14 @@
 "use client";
 import { Input } from "@/components/ui/input";
+import { useAuth } from "@/components/utils/AuthProvider";
 import Link from "next/link";
+import { useState } from "react";
 const Signup = () => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const { register } = useAuth();
   return (
     <div className="flex justify-center mt-12">
       <div className="w-[708px] h-[1024px] bg-white flex justify-center items-center border ">
@@ -20,24 +27,36 @@ const Signup = () => {
             <div className="flex flex-col gap-3 mt-5">
               <Input
                 className="w-[384px] h-[48px] bg-[#f3f4f6]"
-                type="email"
+                type="name"
                 placeholder="Name"
+                value={username}
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                }}
               />
               <Input
                 className="w-[384px] h-[48px] bg-[#f3f4f6]"
                 type="email"
                 placeholder="Email"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
               />
               <Input
                 className="w-[384px] h-[48px] bg-[#f3f4f6]"
-                type="email"
+                type="password"
                 placeholder="Password"
+                value={password}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
               />
-              <Input
+              {/* <Input
                 className="w-[384px] h-[48px] bg-[#f3f4f6]"
                 type="email"
                 placeholder="Re-Password"
-              />
+              /> */}
             </div>
 
             <div className="mt-5">
@@ -45,6 +64,7 @@ const Signup = () => {
                 <button
                   className="w-[384px] h-[48px] bg-blue-600 rounded-xl text-white hover:bg-blue-800"
                   type="submit"
+                  onClick={() => register(username, email, password)}
                 >
                   Sign Up
                 </button>
