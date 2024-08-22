@@ -38,7 +38,7 @@ import {
 export const Add = () => {
   const { userInfo, setUserInfo } = useContext(AccountContext);
   const [amount, setAmount] = useState("");
-  // const [type, setType] = useState("");
+  const [type, setType] = useState("");
   const handleChange = (newValue) => {
     setValue(newValue);
   };
@@ -46,7 +46,12 @@ export const Add = () => {
   const [accounts, setAccounts] = useState([]);
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get("http://localhost:3001/accounts");
+      const response = await axios.get("http://localhost:3001/accounts", {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      });
+
       setAccounts(response.data);
     };
     getData();

@@ -58,7 +58,7 @@ export const Container = () => {
     const getData = async () => {
       const response = await axios.get("http://localhost:3001/accounts", {
         headers: {
-          Authorization: "Bearer" + localStorage.getItem("token"),
+          Authorization: "Bearer " + localStorage.getItem("token"),
         },
       });
       setAccounts(response.data);
@@ -155,105 +155,6 @@ export const Container = () => {
             <div className="flex gap-2 items-center justify-between">
               <div className="flex gap-2">
                 <FaEye className="text-gray-500 hover:text-black" />
-                <h1>Food & Drinks</h1>
-              </div>
-              <div>
-                <Chevron />
-              </div>
-            </div>
-            <div className="flex gap-2 items-center justify-between">
-              <div className="flex gap-2">
-                <FaEye className="text-gray-500 hover:text-black" />
-                <h1>Food & Drinks</h1>
-              </div>
-              <div>
-                <Chevron />
-              </div>
-            </div>
-            <div className="flex gap-2 items-center justify-between">
-              <div className="flex gap-2">
-                <FaEye className="text-gray-500 hover:text-black" />
-                <h1>Shopping</h1>
-              </div>
-              <div>
-                <Chevron />
-              </div>
-            </div>
-            <div className="flex gap-2 items-center justify-between">
-              <div className="flex gap-2">
-                <FaEye className="text-gray-500 hover:text-black" />
-                <h1>Housing</h1>
-              </div>
-              <div>
-                <Chevron />
-              </div>
-            </div>
-            <div className="flex gap-2 items-center justify-between">
-              <div className="flex gap-2">
-                <FaEye className="text-gray-500 hover:text-black" />
-                <h1>Transportation</h1>
-              </div>
-              <div>
-                <Chevron />
-              </div>
-            </div>
-            <div className="flex gap-2 items-center justify-between">
-              <div className="flex gap-2">
-                <FaEye className="text-gray-500 hover:text-black" />
-                <h1>Vehicle</h1>
-              </div>
-              <div>
-                <Chevron />
-              </div>
-            </div>
-            <div className="flex gap-2 items-center justify-between">
-              <div className="flex gap-2">
-                <FaEye className="text-gray-500 hover:text-black" />
-                <h1>Life & Entertainment</h1>
-              </div>
-              <div>
-                <Chevron />
-              </div>
-            </div>
-            <div className="flex gap-2 items-center justify-between">
-              <div className="flex gap-2">
-                <FaEye className="text-gray-500 hover:text-black" />
-                <h1>Communication, PC</h1>
-              </div>
-              <div>
-                <Chevron />
-              </div>
-            </div>
-            <div className="flex gap-2 items-center justify-between">
-              <div className="flex gap-2">
-                <FaEye className="text-gray-500 hover:text-black" />
-                <h1>Financial expenses</h1>
-              </div>
-              <div>
-                <Chevron />
-              </div>
-            </div>
-            <div className="flex gap-2 items-center justify-between">
-              <div className="flex gap-2">
-                <FaEye className="text-gray-500 hover:text-black" />
-                <h1>Investments</h1>
-              </div>
-              <div>
-                <Chevron />
-              </div>
-            </div>
-            <div className="flex gap-2 items-center justify-between">
-              <div className="flex gap-2">
-                <FaEye className="text-gray-500 hover:text-black" />
-                <h1>Income</h1>
-              </div>
-              <div>
-                <Chevron />
-              </div>
-            </div>
-            <div className="flex gap-2 items-center justify-between">
-              <div className="flex gap-2">
-                <FaEye className="text-gray-500 hover:text-black" />
                 <h1>Others</h1>
               </div>
               <div>
@@ -342,33 +243,6 @@ export const Container = () => {
           <h1>Today</h1>
         </div>
 
-        {/* <div className="flex gap-3 mt-4 ">
-          <Checkbox />
-          <input
-            className="w-[200px] border rounded-xl "
-            title="text"
-            placeholder="Amount"
-            value={userInfo.value}
-            onChange={(event) =>
-              setUserInfo({ ...userInfo, amount: event.target.value })
-            }
-          />
-          <Input
-            className="w-[200px] rounded-xl"
-            title="text"
-            placeholder="Type"
-            onChange={(event) =>
-              setUserInfo({ ...userInfo, type: event.target.value })
-            }
-          />
-
-          <button
-            onClick={createAccount}
-            className="w-[200px] [h-10px] bg-blue-400 rounded-xl hover:bg-blue-900"
-          >
-            Add
-          </button>
-        </div> */}
         <div className="">
           {accounts.map((account) => (
             <div className="flex justify-between">

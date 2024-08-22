@@ -39,6 +39,7 @@ import { GiSandsOfTime } from "react-icons/gi";
 import { FaRoad } from "react-icons/fa";
 import { FiAnchor } from "react-icons/fi";
 export const AddCategory = () => {
+  
   return (
     <div className="w-[494px] h-[236px] bg-white ">
       <div className="w-[446px] h-[236px]">
