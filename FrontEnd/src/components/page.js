@@ -8,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get("http://localhost:3001/accounts");
+      const response = await axios.get("http://localhost:5000/accounts");
       setAccounts(response.data);
     };
     getData();

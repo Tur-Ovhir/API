@@ -46,7 +46,7 @@ export default function Done() {
               </div>
             </div>
             <div className="mt-4">
-              <Link href="/Container">
+              <Link href="/container">
                 <button
                   className="w-[384px] h-[48px] bg-blue-600 rounded-xl text-white hover:bg-blue-800"
                   type="submit"

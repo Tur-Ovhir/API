@@ -56,7 +56,7 @@ export const Container = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios.get("http://localhost:3001/accounts", {
+      const response = await axios.get("http://localhost:5000/accounts", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -69,7 +69,7 @@ export const Container = () => {
   const createAccount = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/accounts",
+        "http://localhost:5000/accounts",
         userInfo
       );
     } catch (error) {
@@ -77,7 +77,14 @@ export const Container = () => {
     }
   };
   const deleteAccount = async (id) => {
-    const response = await axios.delete(`http://localhost:3001/accounts/${id}`);
+    const response = await axios.delete(
+      `http://localhost:5000/accounts/${id}`,
+      {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+        },
+      }
+    );
 
     setAccounts(accounts.filter((account) => account.id !== id));
   };

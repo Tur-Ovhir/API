@@ -12,7 +12,7 @@ import {
 import { AddCategory } from "@/components/AddCategory";
 // import { CategoryAdd } from "./CategoryAdd";
 import { Add } from "@/components/Add";
-import Link from 'next/link'
+import Link from "next/link";
 
 export const Navbar = () => {
   return (
@@ -24,13 +24,20 @@ export const Navbar = () => {
         <Link href="/dashboard">
           <p className="text-black">Dashboard</p>
         </Link>
-
-        <h1 className="text-[#0F172A]">Records</h1>
-
+        <Link href="/container">
+          <h1 className="text-[#0F172A]">Records</h1>
+        </Link>
       </div>
       <div className="flex-row flex gap-3">
+        <div>
+          <Link href="/login">
+            <buttton className="bg-[#0166ff] text-white w-[99px] h-[32px] rounded-xl hover:bg-black">
+              Log Out
+            </buttton>
+          </Link>
+        </div>
         <Dialog>
-          <DialogTrigger className="bg-[#0166ff] w-[99px]l h-[32px] rounded-full">
+          <DialogTrigger className="bg-[#0166ff] w-[99px] h-[32px] rounded-full">
             +Record
           </DialogTrigger>
           <DialogContent>

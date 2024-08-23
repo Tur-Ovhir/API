@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await fetch(`http://localhost:3001/accounts`);
+        const res = await fetch(`http://localhost:5000/accounts`);
         const data = await res.json();
         console.log(data);
         setData(data);
