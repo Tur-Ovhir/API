@@ -1,43 +1,7 @@
 [
   {
-    "amount": "600000000",
-    "type": "orlogo",
-    "date": "",
-    "id": "3cc34de2-b9f6-41f6-9eb3-414800e70aaf"
-  },
-  {
-    "amount": "700000000",
-    "type": "bair",
-    "date": "",
-    "id": "53eb5348-7b1b-490d-99ea-39a66590d326"
-  },
-  {
-    "amount": "500000000",
-    "type": "mashin",
-    "date": "",
-    "id": "932ced03-3208-4e7d-a7fc-1894f1d407c0"
-  },
-  {
-    "amount": "3000000",
-    "type": "unadag dugui",
-    "date": "",
-    "id": "361e87d4-1141-48b1-a37e-2a5df3180172"
-  },
-  {
-    "amount": "13000000",
-    "type": "Pinecone",
-    "date": "",
-    "id": "1f332579-8975-47f7-ad86-8af3d3c2995e"
-  },
-  {
-    "amount": "500.000₮",
-    "type": "us,undaa",
-    "id": "2ed84b82-29c2-4fd5-bb5c-34da7bc150bb"
-  },
-  {
-    "amount": "650000",
-    "type": "aavd",
-    "date": "",
-    "id": "76228dfd-bf94-4cb3-9a14-b8fa264c3300"
+    "amount": "500.000",
+    "type": "baraa",
+    "id": "aeb72589-0db8-46b7-b739-c8a641c4625b"
   }
 ]

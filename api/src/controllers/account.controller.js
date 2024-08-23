@@ -1,3 +1,4 @@
+const { log } = require("console");
 const fs = require("fs");
 const path = require("path");
 const { v4 } = require("uuid");
@@ -21,6 +22,8 @@ const createAccount = async (req, res) => {
     const newAccount = { ...req.body, id: v4() };
 
     accounts.push(newAccount);
+    console.log(newAccount);
+
     fs.writeFileSync(filePath, JSON.stringify(accounts, null, 2));
     res.json(newAccount);
   } catch (error) {
