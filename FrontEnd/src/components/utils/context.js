@@ -12,20 +12,32 @@ export const AccountContextProvider = ({ children }) => {
     date: "",
     payee: "",
     note: "",
+    time: "",
   });
   const [category, setCategory] = useState({
     name: "",
     icon: null,
     color: "",
   });
+
+  const [accounts, setAccounts] = useState([]);
+
   return (
     <AccountContext.Provider
-      value={{ userInfo, setUserInfo, category, setCategory }}
+      value={{
+        userInfo,
+        setUserInfo,
+        category,
+        setCategory,
+        accounts,
+        setAccounts,
+      }}
     >
       {children}
     </AccountContext.Provider>
   );
 };
+
 // import React, { createContext, useState } from "react";
 
 // export const AccountContext = createContext();

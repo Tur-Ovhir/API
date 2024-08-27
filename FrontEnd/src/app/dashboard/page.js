@@ -1,9 +1,13 @@
+"use client";
 import { Navbar } from "@/components/Navbar";
+import { useContext } from "react";
+import { AccountContext } from "@/components/utils/context";
 import React from "react";
-import { GoHomeFill } from "react-icons/go";
-import { GoArrowUp } from "react-icons/go";
 import { LuNfc } from "react-icons/lu";
+import { Charts } from "@/components/Charts";
 export default function dashboard() {
+  const { accounts, setAccounts } = useContext(AccountContext);
+
   return (
     <div className="w-full flex justify-center">
       <div className="w-[1200px] h-[920px] border bg-[#f3f4f6] mt-2">
@@ -70,20 +74,26 @@ export default function dashboard() {
           </div>
         </div>
         <div className="flex justify-between mt-5">
-          <div className="w-[588px] h-[284px] bg-red-500 rounded-xl"></div>
-          <div className="w-[588px] h-[284px] bg-red-500 rounded-xl"></div>
+          <div className="w-[588px] h-[284px] bg-white rounded-xl">
+            {/* <Charts /> */}
+          </div>
+          <div className="w-[588px] h-[284px] bg-white rounded-xl"></div>
         </div>
         <div className="w-[1200px] h-[486px] bg-white mt-4 justify-between ">
           <div className="justify-center flex flex-col items-center">
             <div className="w-[1152px] h-[56px] bg-white mt-2 items-center flex ">
               <h1>Last Records</h1>
             </div>
-            {/* <div className="">
+
+            <div className="">
               {accounts.map((account) => (
                 <div className="flex justify-between">
-                  <div className="w-[830px] h-[62px] border flex  justify-between rounded-xl bg-white mt-4 items-center ">
-                    <div>{account.amount}</div>
-                    <div> {account.type}</div>
+                  <div className="w-[1152px] h-[80px] border flex  justify-between rounded-xl bg-white mt-4 items-center ">
+                    <div>{account.Select}</div>
+                    <div className="text-green-400">{account.amount}</div>
+                    <div className="text-blue-500"> {account.type}</div>
+                    <div className="text-yellow-200">{account.date}</div>
+                    <div className="text-pink-900">{account.time}</div>
 
                     <button
                       onClick={() => deleteAccount(account.id)}
@@ -94,7 +104,7 @@ export default function dashboard() {
                   </div>
                 </div>
               ))}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

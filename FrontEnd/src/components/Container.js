@@ -43,6 +43,8 @@ import { FaPlus } from "react-icons/fa6";
 
 export const Container = () => {
   const { userInfo, setUserInfo } = useContext(AccountContext);
+  const { accounts, setAccounts } = useContext(AccountContext);
+
   const [value, setValue] = useState([0, 1000]);
 
   const [amount, setAmount] = useState("");
@@ -52,7 +54,6 @@ export const Container = () => {
     setValue(newValue);
   };
   console.log(userInfo);
-  const [accounts, setAccounts] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
@@ -160,6 +161,12 @@ export const Container = () => {
           </div>
           <div className="mt-4 gap-4 flex flex-col text-[#1f2937]">
             <div className="flex gap-2 items-center justify-between">
+              {/* {accounts.map((account) => (
+                <div className="flex gap-2">
+                  <FaEye className="text-gray-500 hover:text-black" />
+                  <h1>Others</h1>
+                </div>
+              ))} */}
               <div className="flex gap-2">
                 <FaEye className="text-gray-500 hover:text-black" />
                 <h1>Others</h1>
@@ -246,6 +253,15 @@ export const Container = () => {
             <CarouselNext />
           </Carousel>
         </div>
+        <div>
+          <div className="w-[830px] h-[48px] border flex  rounded-xl bg-white mt-4 items-center justify-between ">
+            <div className="flex gap-3">
+              <Checkbox className="ml-3 w-[20px] h-[20px]" />
+              <h1>Select All</h1>
+            </div>
+            <div className="text-red-600">-1.550.000₮</div>
+          </div>
+        </div>
         <div className="mt-3">
           <h1>Today</h1>
         </div>
@@ -254,8 +270,12 @@ export const Container = () => {
           {accounts.map((account) => (
             <div className="flex justify-between">
               <div className="w-[830px] h-[62px] border flex  justify-between rounded-xl bg-white mt-4 items-center ">
-                <div>{account.amount}</div>
-                <div> {account.type}</div>
+                <Checkbox className="ml-3 w-[24px] h-[24px]" />
+                <div>{account.Select}</div>
+                <div className="text-green-400">{account.amount}</div>
+                <div className="text-blue-500"> {account.type}</div>
+                <div className="text-yellow-200">{account.date}</div>
+                <div className="text-pink-900">{account.time}</div>
 
                 <button
                   onClick={() => deleteAccount(account.id)}
