@@ -70,5 +70,50 @@
     "note": "",
     "time": "11:59",
     "id": "eb7caab1-4471-43f0-b0d0-7137a900834b"
+  },
+  {
+    "amount": "500.000₮",
+    "type": "Home",
+    "date": "2024-08-14",
+    "payee": "",
+    "note": "",
+    "time": "21:30",
+    "id": "e715e2ce-87b3-40e8-b5d2-7d2ac2d63b58"
+  },
+  {
+    "amount": "70.000₮",
+    "type": "Gift",
+    "date": "2024-07-30",
+    "payee": "",
+    "note": "",
+    "time": "21:48",
+    "id": "e53a389e-4fb5-400c-91a9-9f4f3ff2148b"
+  },
+  {
+    "amount": "100.000₮",
+    "type": "FOOD",
+    "date": "2024-08-21",
+    "payee": "",
+    "note": "",
+    "time": "09:54",
+    "id": "775a2c93-43e9-4591-81ad-9c18360a9851"
+  },
+  {
+    "amount": "100.000₮",
+    "type": "Shopping",
+    "date": "2024-08-13",
+    "payee": "",
+    "note": "",
+    "time": "11:48",
+    "id": "82f8b51a-6f5e-4204-9acd-8be514dc9925"
+  },
+  {
+    "amount": "40.000₮",
+    "type": "TAXI",
+    "date": "2024-07-28",
+    "payee": "",
+    "note": "",
+    "time": "11:59",
+    "id": "de494b34-3271-4f28-bb4d-66e3458a63ff"
   }
 ]
