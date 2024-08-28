@@ -5,6 +5,8 @@ import { AccountContext } from "@/components/utils/context";
 import React from "react";
 import { LuNfc } from "react-icons/lu";
 import { Charts } from "@/components/Charts";
+import { GoArrowUp } from "react-icons/go";
+import { GoArrowDown } from "react-icons/go";
 export default function dashboard() {
   const { accounts, setAccounts } = useContext(AccountContext);
 
@@ -41,7 +43,7 @@ export default function dashboard() {
               <div>
                 <div className="flex gap-3">
                   <div className="w-[24px] h-[24px] border rounded-full bg-green-400 items-center justify-center flex">
-                    {" "}
+                    <GoArrowUp className="text-white" />
                   </div>
                   <div>
                     <h1>32% from last month</h1>
@@ -63,7 +65,7 @@ export default function dashboard() {
               <div>
                 <div className="flex gap-3">
                   <div className="w-[24px] h-[24px] border rounded-full bg-green-400 items-center justify-center flex">
-                    {" "}
+                    <GoArrowDown className="text-white" />
                   </div>
                   <div>
                     <h1>32% from last month</h1>
@@ -75,9 +77,18 @@ export default function dashboard() {
         </div>
         <div className="flex justify-between mt-5">
           <div className="w-[588px] h-[284px] bg-white rounded-xl">
-            {/* <Charts /> */}
+            <div className="w-[588px] h-[56px] flex items-center border border-gray-400">
+              <h1 className="ml-3 text-xl">Income-Expense</h1>
+            </div>
+            <div className="w-[588px] h-[226px] border border-black"></div>
           </div>
-          <div className="w-[588px] h-[284px] bg-white rounded-xl"></div>
+          <div className="w-[588px] h-[284px] bg-white rounded-xl">
+            <div className="w-[588px] h-[56px] flex items-center border border-gray-400 justify-between">
+              <h1 className="ml-3 text-xl">Income-Expense</h1>
+              <h1 className="text-[#6b7280]">Jun 1 - Nov 30</h1>
+            </div>
+            <div className="w-[588px] h-[226px] border border-black"></div>
+          </div>
         </div>
         <div className="w-[1200px] h-[486px] bg-white mt-4 justify-between ">
           <div className="justify-center flex flex-col items-center">

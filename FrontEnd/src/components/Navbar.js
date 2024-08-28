@@ -1,6 +1,8 @@
 "use client";
 import { Dashboard } from "@/app/dashboard/page";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import * as React from "react";
+// import { ThemeToggle } from "@/components/ThemeToggle";
 import {
   Dialog,
   DialogContent,
@@ -10,9 +12,10 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { AddCategory } from "@/components/AddCategory";
-// import { CategoryAdd } from "./CategoryAdd";
+
 import { Add } from "@/components/Add";
 import Link from "next/link";
+import ThemeToggleButton from "./ThemeToggle";
 
 export const Navbar = () => {
   return (
@@ -30,6 +33,9 @@ export const Navbar = () => {
       </div>
       <div className="flex-row flex gap-3">
         <div>
+          <ThemeToggleButton />
+        </div>
+        <div>
           <Link href="/login">
             <buttton className="bg-[#0166ff] text-white w-[99px] h-[32px] rounded-xl hover:bg-black">
               Log Out
@@ -43,7 +49,6 @@ export const Navbar = () => {
           <DialogContent>
             <div>
               <Add />
-              {/* <CategoryAdd /> */}
             </div>
           </DialogContent>
         </Dialog>

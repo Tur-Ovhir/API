@@ -225,7 +225,7 @@ export const Add = () => {
                 />
               </div>
               <div className="flex flex-col ">
-                <h1>Date</h1>
+                <h1>Time</h1>
                 <div className="w-[168px] h-[48px]">
                   <Input
                     className="w-[168px] h-[48px]"

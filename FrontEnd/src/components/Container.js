@@ -161,12 +161,6 @@ export const Container = () => {
           </div>
           <div className="mt-4 gap-4 flex flex-col text-[#1f2937]">
             <div className="flex gap-2 items-center justify-between">
-              {/* {accounts.map((account) => (
-                <div className="flex gap-2">
-                  <FaEye className="text-gray-500 hover:text-black" />
-                  <h1>Others</h1>
-                </div>
-              ))} */}
               <div className="flex gap-2">
                 <FaEye className="text-gray-500 hover:text-black" />
                 <h1>Others</h1>
