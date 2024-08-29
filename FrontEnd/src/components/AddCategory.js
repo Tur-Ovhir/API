@@ -176,7 +176,10 @@ export const AddCategory = () => {
           <Input type="text" />
         </div>
         <div className="w-32 ">
-          <button className="bg-[#16a34a] w-[446px] h-[40px] rounded-full mt-6">
+          <button
+            onClick={AddCategory}
+            className="bg-[#16a34a] w-[446px] h-[40px] rounded-full mt-6 "
+          >
             Add
           </button>
         </div>

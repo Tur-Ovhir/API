@@ -4,9 +4,12 @@ import { useContext } from "react";
 import { AccountContext } from "@/components/utils/context";
 import React from "react";
 import { LuNfc } from "react-icons/lu";
-import { Charts } from "@/components/Charts";
+
 import { GoArrowUp } from "react-icons/go";
 import { GoArrowDown } from "react-icons/go";
+
+import { PieChart } from "@/components/PieChart";
+
 export default function dashboard() {
   const { accounts, setAccounts } = useContext(AccountContext);
 
@@ -80,7 +83,9 @@ export default function dashboard() {
             <div className="w-[588px] h-[56px] flex items-center border border-gray-400">
               <h1 className="ml-3 text-xl">Income-Expense</h1>
             </div>
-            <div className="w-[588px] h-[226px] border border-black"></div>
+            <div className="w-[588px] h-[226px] border border-black">
+              {/* <PieChart /> */}
+            </div>
           </div>
           <div className="w-[588px] h-[284px] bg-white rounded-xl">
             <div className="w-[588px] h-[56px] flex items-center border border-gray-400 justify-between">

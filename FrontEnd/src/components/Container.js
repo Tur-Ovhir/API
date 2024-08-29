@@ -24,7 +24,7 @@ import { IoHomeSharp } from "react-icons/io5";
 import { CiForkAndKnife } from "react-icons/ci";
 import { Chevron } from "@/Asset/chevronright";
 import { Add } from "@/components/Add";
-
+import { FaTrashAlt } from "react-icons/fa";
 import { Button } from "./ui/button";
 import {
   Select,
@@ -93,7 +93,7 @@ export const Container = () => {
   return (
     <div className="w-full h-[1100px] bg-[#f3f4f6] flex">
       <div className="w-[282px] h-[1080px] border-2">
-        <div className="w-[250px] h-[88px] ">
+        <div className="w-[250px] h-[88px] ml-2">
           <h1 className="text-xl">Records</h1>
 
           <Dialog>
@@ -111,7 +111,7 @@ export const Container = () => {
           </Dialog>
         </div>
 
-        <div className="mt-4">
+        <div className="mt-4 ml-2">
           <Input
             type="text"
             placeholder="Search"
@@ -155,13 +155,13 @@ export const Container = () => {
           </div>
         </div>
         <div className="w-[250px] h-[520px]  mt-3 ">
-          <div className="flex justify-between">
+          <div className="flex justify-between ml-2">
             <h1>Category</h1>
             <h1 className="text-[#CDD0D4]">clear</h1>
           </div>
           <div className="mt-4 gap-4 flex flex-col text-[#1f2937]">
-            <div className="flex gap-2 items-center justify-between">
-              <div className="flex gap-2">
+            <div className="flex gap-2 items-center justify-between ">
+              <div className="flex gap-2  ml-2">
                 <FaEye className="text-gray-500 hover:text-black" />
                 <h1>Others</h1>
               </div>
@@ -264,7 +264,7 @@ export const Container = () => {
           {accounts.map((account) => (
             <div className="flex justify-between">
               <div className="w-[830px] h-[62px] border flex  justify-between rounded-xl bg-white mt-4 items-center ">
-                <Checkbox className="ml-3 w-[24px] h-[24px]" />
+                <Checkbox className="ml-3 w-[24px] h-[24px] rounded-full" />
                 <div>{account.Select}</div>
                 <div className="text-green-400">{account.amount}</div>
                 <div className="text-blue-500"> {account.type}</div>
@@ -273,9 +273,13 @@ export const Container = () => {
 
                 <button
                   onClick={() => deleteAccount(account.id)}
-                  className="w-[100px] h-[30px] bg-red-600 rounded-full hover:bg-red-800 "
+                  className=" hover:bg-red-800 rounded-xl "
+                  å
                 >
-                  Delete
+                  <FaTrashAlt
+                    className="w-[20px] h-[20px] text-red-500"
+                    Устгах
+                  />
                 </button>
               </div>
             </div>
