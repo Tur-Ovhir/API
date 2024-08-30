@@ -1,83 +1,38 @@
 [
   {
-    "amount": "1.000.000₮",
-    "type": "Төлбөр",
-    "date": "2024-08-27",
+    "amount": "300.000₮",
+    "type": "Gift",
+    "date": "2024-08-13",
     "payee": "",
     "note": "",
-    "time": "09:46",
-    "id": "d0c1efad-1dd7-4e6c-ae52-f1d4fcd0fba3"
+    "time": "21:15",
+    "id": "26116e20-c941-46d7-a7c9-052db5b8025c"
   },
   {
     "amount": "400.000₮",
-    "type": "Network",
-    "date": "2024-08-27",
+    "type": "SHOPPING",
+    "date": "2024-08-07",
     "payee": "",
     "note": "",
-    "time": "10:17",
-    "id": "e7775f39-b40e-49ce-8201-cd70294c4fbe"
-  },
-  {
-    "amount": "300.000₮",
-    "type": "Гэр",
-    "date": "2024-08-27",
-    "payee": "",
-    "note": "",
-    "time": "10:26",
-    "id": "2934df29-f3d7-4f43-a956-e28a803ae42f"
-  },
-  {
-    "amount": "100.000₮",
-    "type": "Анги",
-    "date": "2024-08-27",
-    "payee": "",
-    "note": "",
-    "time": "10:40",
-    "id": "463c910c-9661-42da-b5dd-713c94f755ff"
+    "time": "12:59",
+    "id": "46b62468-3094-45ee-89bf-071a7a007d94"
   },
   {
     "amount": "500.000₮",
-    "type": "Home",
-    "date": "2024-08-14",
-    "payee": "",
-    "note": "",
-    "time": "21:30",
-    "id": "e715e2ce-87b3-40e8-b5d2-7d2ac2d63b58"
-  },
-  {
-    "amount": "70.000₮",
-    "type": "Gift",
-    "date": "2024-07-30",
-    "payee": "",
-    "note": "",
-    "time": "21:48",
-    "id": "e53a389e-4fb5-400c-91a9-9f4f3ff2148b"
-  },
-  {
-    "amount": "100.000₮",
-    "type": "FOOD",
-    "date": "2024-08-21",
-    "payee": "",
-    "note": "",
-    "time": "09:54",
-    "id": "775a2c93-43e9-4591-81ad-9c18360a9851"
-  },
-  {
-    "amount": "30.000",
-    "type": "HOME",
-    "date": "2024-08-17",
-    "payee": "",
-    "note": "",
-    "time": "17:45",
-    "id": "35f421cb-14d9-4e23-ac5d-aa8e45b7791d"
-  },
-  {
-    "amount": "50.000₮",
     "type": "DRINK",
-    "date": "2024-07-28",
+    "date": "2024-08-06",
     "payee": "",
     "note": "",
-    "time": "00:30",
-    "id": "5b879cec-b1fd-4cf3-a2f5-7df2d67d79e3"
+    "time": "12:12",
+    "id": "a675df10-e3dd-4ca4-a514-ff6e2584d267"
+  },
+  {
+    "amount": "100.000",
+    "type": "FOOD",
+    "date": "2024-08-29",
+    "payee": "",
+    "note": "",
+    "time": "10:23",
+    "id": "ffdca058-acfe-4426-870b-365ee4db18f1"
   }
 ]
