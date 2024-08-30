@@ -25,6 +25,8 @@ import { CiForkAndKnife } from "react-icons/ci";
 import { Chevron } from "@/Asset/chevronright";
 import { Add } from "@/components/Add";
 import { FaTrashAlt } from "react-icons/fa";
+import { IoEyeOff } from "react-icons/io5";
+
 import { Button } from "./ui/button";
 import {
   Select,
@@ -156,7 +158,7 @@ export const Container = () => {
         </div>
         <div className="w-[250px] h-[520px]  mt-3 ">
           <div className="flex justify-between ml-2">
-            <h1>Category</h1>
+            <h1 className="text-xl">Category</h1>
             <h1 className="text-[#CDD0D4]">clear</h1>
           </div>
           <div className="mt-4 gap-4 flex flex-col text-[#1f2937]">
@@ -165,6 +167,37 @@ export const Container = () => {
                 <FaEye className="text-gray-500 hover:text-black" />
                 <h1>Others</h1>
               </div>
+
+              <div>
+                <Chevron />
+              </div>
+            </div>
+            <div className="flex gap-2 items-center justify-between ">
+              <div className="flex gap-2  ml-2">
+                <FaEye className="text-gray-500 hover:text-black" />
+                <h1>Others</h1>
+              </div>
+
+              <div>
+                <Chevron />
+              </div>
+            </div>
+            <div className="flex gap-2 items-center justify-between ">
+              <div className="flex gap-2  ml-2">
+                <FaEye className="text-gray-500 hover:text-black" />
+                <h1>Others</h1>
+              </div>
+
+              <div>
+                <Chevron />
+              </div>
+            </div>
+            <div className="flex gap-2 items-center justify-between ">
+              <div className="flex gap-2  ml-2">
+                <FaEye className="text-gray-500 hover:text-black" />
+                <h1>Others</h1>
+              </div>
+
               <div>
                 <Chevron />
               </div>
@@ -265,7 +298,7 @@ export const Container = () => {
             <div className="flex justify-between">
               <div className="w-[830px] h-[62px] border flex  justify-between rounded-xl bg-white mt-4 items-center ">
                 <Checkbox className="ml-3 w-[24px] h-[24px] rounded-full" />
-                <div>{account.Select}</div>
+                <div>{account.categories}</div>
                 <div className="text-green-400">{account.amount}</div>
                 <div className="text-blue-500"> {account.type}</div>
                 <div className="text-yellow-200">{account.date}</div>
@@ -273,13 +306,9 @@ export const Container = () => {
 
                 <button
                   onClick={() => deleteAccount(account.id)}
-                  className=" hover:bg-red-800 rounded-xl "
-                  å
+                  className=" hover:text-red-800 rounded-xl "
                 >
-                  <FaTrashAlt
-                    className="w-[20px] h-[20px] text-red-500"
-                    Устгах
-                  />
+                  <FaTrashAlt className="w-[20px] h-[20px] text-red-500" />
                 </button>
               </div>
             </div>

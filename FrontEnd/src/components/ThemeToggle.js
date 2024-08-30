@@ -27,9 +27,9 @@ const ThemeToggleButton = () => {
   return (
     <button onClick={toggleTheme} className="icon-button">
       {isDarkMode ? (
-        <FaSun className="w-[20px] h-[20px]" />
+        <FaSun className="w-[24px] h-[24px] text-yellow-600" />
       ) : (
-        <FaMoon className="w-[20px] h-[20px]" />
+        <FaMoon className="w-[24px] h-[24px]" />
       )}
     </button>
   );

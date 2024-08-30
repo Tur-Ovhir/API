@@ -47,10 +47,11 @@ export const Add = () => {
     { id: "7", name: " Add Category", img: "CirclePlus", color: "black" },
     { id: "1", name: "Home", img: "House", color: "blue" },
     { id: "3", name: "Gift", img: "Gift", color: "pink" },
-    { id: "2", name: "Food", img: "Utensils", color: "red" },
+    { id: "2", name: "Food", img: "Utensils", color: "silver" },
     { id: "4", name: "Drink", img: "Wine", color: "green" },
     { id: "5", name: "Shopping", img: "Shirt", color: "black" },
-    { id: "6", name: "Taxi", img: "CarTaxiFront", color: "yellow" },
+    { id: "8", name: "LOVE", img: "Heart", color: "red" },
+    { id: "10", name: "HAHA", img: "Heart", color: "black" },
   ];
   console.log(userInfo);
   const [accounts, setAccounts] = useState([]);
@@ -61,7 +62,6 @@ export const Add = () => {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
       });
-
       setAccounts(response.data);
     };
     getData();
